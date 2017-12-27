@@ -44,7 +44,7 @@ header {
   display: block;
   width: 100%;
   float: left;
-  padding: 1rem;
+  padding: 4rem 1rem;
   text-align: center;
 }
 
@@ -52,6 +52,7 @@ header {
   header {
     width: 50%;
     height: 100vh;
+    padding: 1rem;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -131,10 +132,15 @@ main {
   main {
     margin-left: 50%;
     width: 50%;
-    height: 100vh;
     float: left;
-    /* overflow: auto; */
   }
+}
+
+.main--scroll-container{
+  position: relative;
+  display: block;
+  width: 100%;
+  float: left;
 }
 
 .osx-window {
@@ -462,4 +468,62 @@ main {
 }
 .osx-window .body a:hover, .osx-window .body a:focus, .osx-window .body a:active, .osx-window .body a:visited:hover, .osx-window .body a:visited:focus, .osx-window .body a:visited:active {
   color: blue;
+}
+
+.stickies {
+  position: relative;
+  display: block;
+  max-width: 480px;
+  min-width: 300px;
+  margin: 2rem auto;
+  background: #FDF3A6;
+  -webkit-box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25);
+}
+.stickies .stickies-bar {
+  position: relative;
+  height: 12px;
+  width: 100%;
+  border-top: 1px solid #C0A947;
+  border-left: 1px solid #C0A947;
+  border-right: 1px solid #C0A947;
+  background: #FCE760;
+}
+.stickies .stickies-bar:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  height: 5px;
+  width: 5px;
+  background: -webkit-gradient(linear, right bottom, left top, from(#D4CA54), to(#FCE760));
+  background: linear-gradient(bottom right, #D4CA54 0%, #FCE760 100%);
+  border: 1px solid #FCF38F;
+  -webkit-box-shadow: 1px 1px 1px #D4CA54;
+          box-shadow: 1px 1px 1px #D4CA54;
+}
+.stickies .stickies-body {
+  border: 1px solid #C0A947;
+  height: 300px;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+.stickies .stickies-body .stickies-title {
+  margin-top: 0;
+  font-weight: bold;
+}
+.stickies .stickies-body ul {
+  padding-left: 0;
+  list-style-position: inside;
+}
+.stickies .stickies-body ul li {
+  margin-bottom: 8px;
+}
+.stickies .stickies-body ul a {
+  text-decoration: underline;
+  color: blue;
+}
+.stickies .stickies-body ul a:visited {
+  color: purple;
 }
