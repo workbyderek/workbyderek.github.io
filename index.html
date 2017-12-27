@@ -6,470 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.typekit.net/mmt3vdc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <style>
-    * {
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-    }
-
-    html,
-    body {
-      -webkit-tap-highlight-color: transparent;
-      -webkit-touch-callout: none;
-      min-height: 100%;
-      -webkit-text-size-adjust: 100%;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body {
-      background: #F1F1F2;
-      color: #202020;
-      width: 100%;
-    }
-
-    body:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "cooper-black-std", serif;
-      font-weight: 400;
-    }
-
-    img {
-      max-width: 100%;
-      vertical-align: middle;
-    }
-
-    header {
-      position: relative;
-      display: block;
-      width: 100%;
-      float: left;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    @media (min-width: 820px) {
-      header {
-        width: 50%;
-        height: 100vh;
-        text-align: left;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-      }
-    }
-    header h1 {
-      position: relative;
-      margin: 0 0 1rem 0;
-      font-size: 80px;
-      font-size: 24.25vw;
-      line-height: 0.85;
-      letter-spacing: -3px;
-      text-transform: lowercase;
-    }
-
-    @media (min-width: 330px) {
-      header h1 {
-        font-size: 80px;
-        font-size: 24.25vw;
-      }
-    }
-    @media (min-width: 530px) {
-      header h1 {
-        font-size: 128px;
-      }
-    }
-    @media (max-height: 600px) {
-      header h1 {
-        font-size: 21.35vh;
-      }
-    }
-    .header--pre {
-      position: relative;
-      display: block;
-      width: 100%;
-      float: left;
-    }
-
-    .header--proper {
-      position: relative;
-      display: block;
-      width: 100%;
-      float: left;
-    }
-
-    .header--post {
-      position: relative;
-      display: block;
-      width: 100%;
-      float: left;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    main {
-      position: relative;
-      display: block;
-      width: 100%;
-      float: left;
-      padding: 1rem;
-    }
-
-    @media (min-width: 820px) {
-      main {
-        width: 50%;
-        height: 100vh;
-        float: left;
-        overflow: auto;
-      }
-    }
-
-    .osx-window {
-      max-width: 480px;
-      min-width: 300px;
-      margin: 2rem auto;
-      -webkit-box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25);
-              box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.25);
-      overflow: hidden;
-    }
-    .osx-window .chrome-bar {
-      position: relative;
-      text-align: center;
-      width: 100%;
-      padding: 3px 5px;
-      background: -webkit-gradient(linear, left top, left bottom, from(#CFCFCF), color-stop(97%, #A8A8A8), to(#000));
-      background: linear-gradient(#CFCFCF 0%, #A8A8A8 97%, #000 100%);
-      -webkit-box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5);
-              box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5);
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-    .osx-window .chrome-bar--title {
-      text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
-    }
-    .osx-window .chrome-bar--buttons {
-      position: absolute;
-      top: 3px;
-      left: 8px;
-    }
-    .osx-window .chrome-bar--buttons .button {
-      position: relative;
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
-              box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5);
-      display: inline-block;
-    }
-    .osx-window .chrome-bar--buttons .button:before {
-      content: '';
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
-      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%);
-    }
-    .osx-window .chrome-bar--buttons .button:first-child {
-      background: -webkit-gradient(linear, left top, left bottom, from(#D63131), to(#EF8D8D));
-      background: linear-gradient(#D63131 0%, #EF8D8D 100%);
-    }
-    .osx-window .chrome-bar--buttons .button:first-child:after {
-      content: '';
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.35);
-    }
-    .osx-window .chrome-bar--buttons .button:nth-child(2) {
-      background: -webkit-gradient(linear, left top, left bottom, from(#D98738), to(#FBEC88));
-      background: linear-gradient(#D98738 0%, #FBEC88 100%);
-    }
-    .osx-window .chrome-bar--buttons .button:last-child {
-      background: -webkit-gradient(linear, left top, left bottom, from(#7EBA4F), to(#C4E68A));
-      background: linear-gradient(#7EBA4F 0%, #C4E68A 100%);
-    }
-    .osx-window .styles {
-      background: #EDEDED;
-      width: 480px;
-      overflow: hidden;
-    }
-    .osx-window .styles .drops {
-      padding: 5px;
-    }
-    .osx-window .styles .drops .drop--element {
-      margin-right: 5px;
-      -webkit-box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.25);
-              box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.25);
-      border: 1px solid rgba(0, 0, 0, 0.25);
-      border-radius: 5px;
-      background: -webkit-gradient(linear, left top, left bottom, from(#FBFBFB), color-stop(30%, #E3E3E3), color-stop(60%, #E3E3E3), to(#FBFBFB));
-      background: linear-gradient(#FBFBFB 0%, #E3E3E3 30%, #E3E3E3 60%, #FBFBFB 100%);
-    }
-    .osx-window .styles .drops .drop--styles {
-      position: relative;
-      overflow: hidden;
-      padding: 2px 6px;
-      font-size: 10px;
-      width: 80px;
-      float: left;
-    }
-    .osx-window .styles .drops .drop--styles:after {
-      content: "\25BE";
-      font-size: 12px;
-      padding: 1px 0;
-      text-align: center;
-      height: 100%;
-      width: 16px;
-      background: -webkit-gradient(linear, left top, left bottom, from(#352F94), color-stop(1%, #DFE7F4), color-stop(15%, #AECFF0), color-stop(50%, #7DB1E9), color-stop(75%, #9DC9F6), to(#CDF7FE));
-      background: linear-gradient(#352F94 0%, #DFE7F4 1%, #AECFF0 15%, #7DB1E9 50%, #9DC9F6 75%, #CDF7FE 100%);
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-    .osx-window .styles .drop--alignments {
-      position: relative;
-      display: block;
-      float: left;
-    }
-    .osx-window .styles .drop--alignments .alignment-btn {
-      width: 27px;
-      float: left;
-      border-right: 1px solid rgba(0, 0, 0, 0.25);
-      text-align: center;
-      padding: 2.5px 8px;
-    }
-    .osx-window .styles .drop--alignments .alignment-btn:last-child {
-      border-right: 0;
-    }
-    .osx-window .styles .drop--alignments .alignment-btn span {
-      content: "";
-      width: 10px;
-      height: 1px;
-      background: #000;
-      position: relative;
-      display: block;
-      margin-bottom: 1px;
-    }
-    .osx-window .styles .drop--alignments .alignment-btn.alignment--left .two, .osx-window .styles .drop--alignments .alignment-btn.alignment--left .four, .osx-window .styles .drop--alignments .alignment-btn.alignment--right .two, .osx-window .styles .drop--alignments .alignment-btn.alignment--right .four, .osx-window .styles .drop--alignments .alignment-btn.alignment--center .two, .osx-window .styles .drop--alignments .alignment-btn.alignment--center .four {
-      width: 6px;
-    }
-    .osx-window .styles .drop--alignments .alignment-btn.alignment--right {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
-    }
-    .osx-window .styles .drop--alignments .alignment-btn.alignment--center {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-    }
-    .osx-window .styles .margin-control {
-      -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
-              box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-      position: relative;
-      float: left;
-      margin: 2px 0px 0px 35px;
-      background: #E4E4E4;
-    }
-    .osx-window .styles .margin-control .margin-btn {
-      display: inline-block;
-      width: 10px;
-      height: 14px;
-      float: left;
-      text-align: center;
-      padding: 0 8px;
-      position: relative;
-    }
-    .osx-window .styles .margin-control .margin-btn:after {
-      content: "";
-      display: block;
-      position: absolute;
-    }
-    .osx-window .styles .margin-control .margin-btn.margin--right-triangle:after {
-      width: 0;
-      height: 0;
-      border-top: 4px solid transparent;
-      border-left: 5px solid #000;
-      border-bottom: 4px solid transparent;
-      top: 3px;
-      left: 7px;
-    }
-    .osx-window .styles .margin-control .margin-btn.margin--diamond:after {
-      height: 6px;
-      width: 6px;
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg);
-      background-color: #000000;
-      top: 4px;
-      left: 6px;
-    }
-    .osx-window .styles .margin-control .margin-btn.margin--left-triangle:after {
-      width: 0;
-      height: 0;
-      border-top: 4px solid transparent;
-      border-right: 5px solid #000;
-      border-bottom: 4px solid transparent;
-      top: 3px;
-      left: 5px;
-    }
-    .osx-window .styles .margin-control .margin-btn #octagon {
-      width: 6.5px;
-      height: 6px;
-      background: #000;
-      position: absolute;
-      display: block;
-      top: 4px;
-      left: 3px;
-    }
-    .osx-window .styles .margin-control .margin-btn #octagon:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-bottom: 2.25px solid #000;
-      border-left: 2px solid #E4E4E4;
-      border-right: 2px solid #E4E4E4;
-      width: 3px;
-      height: 0;
-    }
-    .osx-window .styles .margin-control .margin-btn #octagon:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-top: 2.25px solid #000;
-      border-left: 2px solid #E4E4E4;
-      border-right: 2px solid #E4E4E4;
-      width: 3px;
-      height: 0;
-    }
-    .osx-window .rule {
-      position: relative;
-      height: 15px;
-      width: 550px;
-      float: left;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #9F9F9F;
-      margin-top: 15px;
-      padding-left: 5px;
-    }
-    .osx-window .rule:before {
-      content: "\00a0|";
-      font-size: 10px;
-      position: absolute;
-      top: -10px;
-      left: 2px;
-      height: 2px;
-      width: 8px;
-      background: #000;
-    }
-    .osx-window .rule .inch, .osx-window .rule .half-inch {
-      display: block;
-      position: relative;
-      width: 72px;
-      float: left;
-      font-size: 9px;
-      border-left: 1px solid #000;
-      padding-left: 3px;
-    }
-    .osx-window .rule .inch:before, .osx-window .rule .half-inch:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-top: 4px solid transparent;
-      border-left: 5px solid #000;
-      border-bottom: 4px solid transparent;
-      top: -9px;
-      left: -1px;
-    }
-    .osx-window .rule .inch:after, .osx-window .rule .half-inch:after {
-      content: "\00a0\00a0\00a0\00a0|\00a0\00a0\00a0\00a0|\00a0\00a0\00a0\00a0|";
-      font-size: 6px;
-      font-weight: bold;
-      width: 100%;
-      position: absolute;
-      top: -1px;
-      left: 2px;
-      height: 3px;
-    }
-    .osx-window .rule .inch:first-child:before,
-    .osx-window .rule .inch:last-child .half-inch:before {
-      border-left: 4px solid transparent;
-      border-top: 5px solid #000;
-      border-right: 4px solid transparent;
-      top: -6px;
-      left: -4px;
-    }
-    .osx-window .rule .half-inch {
-      display: inline-block;
-      width: 36px;
-      height: 4px;
-      float: right;
-    }
-    .osx-window .body {
-      position: relative;
-      background: #fff;
-      width: 100%;
-      font-family: "Menlo", monospace;
-      font-weight: 500;
-      font-size: 10px;
-      line-height: 1.5;
-      padding: 5px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .osx-window .body p {
-      margin: 0 0 15px 0;
-    }
-    .osx-window .body a, .osx-window .body a:visited {
-      text-decoration: underline;
-    }
-    .osx-window .body a:hover, .osx-window .body a:focus, .osx-window .body a:active, .osx-window .body a:visited:hover, .osx-window .body a:visited:focus, .osx-window .body a:visited:active {
-      color: blue;
-    }
-
-  </style>
+    <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -492,13 +30,14 @@
 					<div class="button"></div>
 					<div class="button"></div>
 				</div>
-				<span class="chrome-bar--title">Project-1.png</span>
+				<span class="chrome-bar--title">Pitts_Burgh_City.ai</span>
 			</div>
+
 			<div class="body">
-				<img src="https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=c595cf8a3f746ae8e421be7a71bbe148">
+				<img src="img/PittsBurghCity--WBD.jpg" title="Pitts Burgh City - Cotton Bureau T-Shirt Design">
 				<br><br>
-				<p>This is some text about this work.</p>
-				<p><a href="/">This is a link.</a></p>
+				<p>Pitts Burgh City - Cotton Bureau T-Shirt Design</p>
+				<p><a href="" alt="/">Coming Soon</a></p>
 			</div>
 		</div>
 		<div class="osx-window">
@@ -508,10 +47,32 @@
 					<div class="button"></div>
 					<div class="button"></div>
 				</div>
-				<span class="chrome-bar--title">Untitled 4</span>
+				<span class="chrome-bar--title">VoCA.html</span>
 			</div>
 			<div class="body">
-				<img src="https://images.unsplash.com/photo-1499892477393-f675706cbe6e?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=88299d3a8e6afcaf4cf641a1c47896db">
+				<img src="img/VoCA--WBD.gif" title="VoCA: Voices in Contemporary Arts">
+        <br><br>
+				<p>VoCA: Voices in Contemporary Arts</p>
+        <p>Designed by <a href="http://www.justinvisnesky.com/" alt="Justin Visnesky">Justin Visnesky</a>, as part of <a href="http://juniorvarsitystudios.com/" alt="Junior Varsity Studios">Junior Varsity Studios</a>, I was developed and maintain the institutions suite of custom sites.</p>
+				<p><a href="#" alt="/">VoCA</a></p>
+        <p><a href="#" alt="/">VoCA: Journal</a></p>
+        <p><a href="#" alt="/">VoCA: Summit</a></p>
+			</div>
+		</div>
+    <div class="osx-window">
+			<div class="chrome-bar">
+				<div class="chrome-bar--buttons">
+					<div class="button"></div>
+					<div class="button"></div>
+					<div class="button"></div>
+				</div>
+				<span class="chrome-bar--title">CodePen.html</span>
+			</div>
+			<div class="body">
+				<img src="img/CodePen--WBD.jpg" title="CodePen Profile for Derek Palladino">
+        <br><br>
+				<p>I making web things to varying degrees of success over at Codepen.</p>
+				<p><a href="https://www.codepen.io/derekjp" alt="/">Codepen User Profile</a></p>
 			</div>
 		</div>
 		<div class="osx-window">
@@ -521,10 +82,36 @@
 					<div class="button"></div>
 					<div class="button"></div>
 				</div>
-				<span class="chrome-bar--title">Untitled 4</span>
+				<span class="chrome-bar--title">dev-work.html</span>
 			</div>
 			<div class="body">
-				<img src="https://images.unsplash.com/photo-1492037766660-2a56f9eb3fcb?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=bc13c1d5b236890f895e0a393a88f393">
+        <p>I have been a Front-End Developer for more 5 years. You can see some of the large scale site I have worked on here:</p>
+        <ul>
+          <li>
+            <a href="http://boler.jcu.edu/" alt="Boler School of Business" title="Boler School of Business">Boler School of Business</a>
+          </li>
+          <li>
+            <a href="http://voice.ons.org/" alt="ONS Voice" title="ONS Voice">ONS Voice</a>
+          </li>
+			    <li>
+            <a href="http://cmtoday.cmu.edu/" alt="Carnegie Mellon Today" title="Carnegie Mellon Today">Carnegie Mellon Today</a>
+          </li>
+          <li>
+            <a href="http://www.cua.edu" alt="The Catholic University" title="The Catholic University">The Catholic University</a>
+          </li>
+			    <li>
+            <a href="http://lerner.udel.edu/" alt="Lerner College" title="Lerner College">Lerner College</a>
+          </li>
+          <li>
+            <a href="https://www.grantstreet.com" alt="Grant Street Group" title="Grant Street Group">Grant Street Group</a>
+          </li>
+          <li>
+            <a href="http://www.oncc.org/" alt="Oncology Nursing Certification Corporation" title="Oncology Nursing Certification Corporation">Oncology Nursing Certification Corporation</a>
+          </li>
+          <li>
+            <a href="http://www.williamwoods.edu/" alt="William Woods University" title="William Woods University">William Woods University</a>
+          </li>
+    		</ul>
 			</div>
 		</div>
 	</div>
