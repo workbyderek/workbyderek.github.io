@@ -52,7 +52,7 @@ header {
   header {
     width: 50%;
     height: 100vh;
-    padding: 1rem;
+    padding: 2rem 1rem;
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
