@@ -513,7 +513,7 @@ footer{
 }
 .stickies .stickies-body {
   border: 1px solid #C0A947;
-  height: 300px;
+  min-height: 300px;
   padding: 5px 8px;
   font-size: 12px;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
