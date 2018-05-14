@@ -46,6 +46,8 @@ header {
   float: left;
   padding: 4rem 1rem;
   text-align: center;
+  background-color: #202020;
+  color: #F1F1F2;
 }
 
 @media (min-width: 820px) {
