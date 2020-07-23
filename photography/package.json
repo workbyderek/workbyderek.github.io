@@ -2,7 +2,7 @@
   "name": "photography",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://workbyderek.github.io/photography",
+  "homepage": "http://workbyderek.github.io/",
   "dependencies": {
     "cra-template": "1.0.3",
     "fibers": "^5.0.0",
