@@ -528,6 +528,9 @@ footer{
   padding-left: 0;
   list-style-position: inside;
 }
+.stickies .stickies-body p{
+  margin: 8px 0;
+}
 .stickies .stickies-body ul li {
   margin-bottom: 8px;
 }
@@ -537,4 +540,18 @@ footer{
 }
 .stickies .stickies-body ul a:visited {
   color: purple;
+}
+
+/* Responsive Embed Video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
